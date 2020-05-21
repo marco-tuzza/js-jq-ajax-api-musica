@@ -14,10 +14,23 @@
                 <img src="https://www.gabrielerapino.com/it/files/2018/11/youtube-logo.png" alt="">
                 <span>Music</span>
             </div>
-            <div class="nav"
+            <div class="nav">
+                <ul>
+                    <li id="home">Home</li>
+                    <li id="dropdown">Generi</li>
+                    <li>Cerca</li>
+                </ul>
+                <div class="dropdown">
+                    <ul>
+                        <li>Rock</li>
+                        <li>Pop</li>
+                        <li>Jazz</li>
+                        <li>Metal</li>
+                    </ul>
+                </div>
             </div>
             <div class="user">
-                <img src="" alt="">
+                <img src="https://www.w3schools.com/howto/img_avatar.png" alt="">
             </div>
         </header>
         <main>
@@ -34,7 +47,7 @@
                 <div class="info">
                     <span>{{author}}</span>
                     <span>-</span>
-                    <span>{{genre}}</span>
+                    <span class="genre">{{genre}}</span>
                 </div>
                 <div class="year">
                     <span>{{year}}</span>

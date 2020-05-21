@@ -42,3 +42,52 @@ $.ajax({
     }
 
 });
+
+$("#dropdown").hover(showDropdown);
+
+$(".dropdown").mouseleave(hideDropdown);
+
+$(".dropdown li").click(genre);
+
+$(".logo, #home").click(showAll)
+
+
+function showDropdown () {
+
+    $(".dropdown").slideDown();
+
+};
+
+function hideDropdown () {
+
+    $(".dropdown").slideUp();
+
+}
+
+function genre() {
+
+    $(".element").show();
+
+    var genre = $(this).text();
+
+    var element = $(".element").length;
+
+    for (var i = 0; i < element; i++) {
+
+        var elementGenre = $(".element").eq(i).find(".genre").text();
+
+        if (elementGenre != genre) {
+
+            $(".element").eq(i).hide();
+
+        }
+
+    };
+
+};
+
+function showAll() {
+
+    $(".element").show()
+
+}
