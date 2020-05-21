@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Dischi</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="https://www.gabrielerapino.com/it/files/2018/11/youtube-logo.png" alt="">
+                <span>Music</span>
+            </div>
+            <div class="nav"
+            </div>
+            <div class="user">
+                <img src="" alt="">
+            </div>
+        </header>
+        <main>
+
+        </main>
+        <script id="entry-template" type="text/x-handlebars-template">
+            <div class="element">
+                <div class="poster">
+                    <img src="{{poster}}" alt="">
+                </div>
+                <div class="title">
+                    <span>{{title}}</span>
+                </div>
+                <div class="info">
+                    <span>{{author}}</span>
+                    <span>-</span>
+                    <span>{{genre}}</span>
+                </div>
+                <div class="year">
+                    <span>{{year}}</span>
+                </div>
+            </div>
+        </script>
+        <script src="main.js" charset="utf-8"></script>
+    </body>
+</html>
