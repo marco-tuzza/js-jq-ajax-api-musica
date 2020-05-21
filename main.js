@@ -44,13 +44,13 @@ $(".logo, #home").click(showAll)
 
 function showDropdown () {
 
-    $(".dropdown").slideDown();
+    $(".dropdown").show();
 
 };
 
 function hideDropdown () {
 
-    $(".dropdown").slideUp();
+    $(".dropdown").hide();
 
 }
 
