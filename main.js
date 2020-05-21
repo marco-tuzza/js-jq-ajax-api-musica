@@ -1,5 +1,3 @@
-// https://flynn.boolean.careers/exercises/api/array/music
-
 var source   = $("#entry-template").html();
 
 var template = Handlebars.compile(source);
@@ -8,6 +6,7 @@ var template = Handlebars.compile(source);
 $.ajax({
 
     "url": "https://flynn.boolean.careers/exercises/api/array/music",
+
 
     "method": "get",
 
@@ -27,7 +26,7 @@ $.ajax({
 
             $("main").append(html);
 
-        }
+        };
 
     }
 
@@ -39,7 +38,7 @@ $(".dropdown").mouseleave(hideDropdown);
 
 $(".dropdown li").click(genre);
 
-$(".logo, #home").click(showAll)
+$(".logo, #home").click(showAll);
 
 
 function showDropdown () {
@@ -52,7 +51,7 @@ function hideDropdown () {
 
     $(".dropdown").hide();
 
-}
+};
 
 function genre() {
 
@@ -60,24 +59,23 @@ function genre() {
 
     var genre = $(this).text();
 
-    var element = $(".element").length;
+    $(".element").each(
 
-    for (var i = 0; i < element; i++) {
+        function() {
 
-        var elementGenre = $(".element").eq(i).find(".genre").text();
+            var elementGenre = $(this).find(".genre").text();
 
-        if (elementGenre != genre) {
+            if (elementGenre != genre) {
 
-            $(".element").eq(i).hide();
+                $(this).hide();
 
+            };
         }
-
-    };
-
+    );
 };
 
 function showAll() {
 
-    $(".element").show()
+    $(".element").show();
 
-}
+};
