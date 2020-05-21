@@ -15,22 +15,12 @@ $.ajax({
 
         for (var i = 0; i < data.response.length; i++) {
 
-            var poster = data.response[i].poster;
-
-            var title = data.response[i].title;
-
-            var author = data.response[i].author;
-
-            var genre = data.response[i].genre;
-
-            var year = data.response[i].year;
-
             var context = {
-                "poster" : poster,
-                "title" : title,
-                "author" : author,
-                "genre" : genre,
-                "year" : year,
+                "poster" : data.response[i].poster,
+                "title" : data.response[i].title,
+                "author" : data.response[i].author,
+                "genre" : data.response[i].genre,
+                "year" : data.response[i].year,
             };
 
             var html = template(context);

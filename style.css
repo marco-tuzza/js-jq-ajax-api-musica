@@ -111,10 +111,6 @@ main {
     margin-left: 20px;
 }
 
-.none {
-    display: none;
-}
-
 .element:hover {
     cursor: pointer;
     transform: scale(1.05);
