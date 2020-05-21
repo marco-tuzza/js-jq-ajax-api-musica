@@ -40,7 +40,6 @@ header {
     align-items: center;
     justify-content: center;
     width: 50%;
-    position: relative;
 }
 
 .nav > ul > li {
@@ -51,6 +50,34 @@ header {
 }
 
 .nav li:hover {
+    cursor: pointer;
+}
+
+.nav input {
+    width: 600px;
+    height: 30px;
+    padding-left: 10px;
+    color: #ffffff;
+    background-color: #000000;
+    border: 1px solid #313131;
+    border-right: none;
+    display: none;
+}
+
+.nav input::placeholder {
+    color: #757575;
+    font-size: 18px;
+}
+
+.fas, .fa-search {
+    color: #6f6f6f;
+    background-color: #313131;
+    padding: 8px 30px;
+    right: 0;
+    display: none;
+}
+
+i:hover {
     cursor: pointer;
 }
 
@@ -137,7 +164,7 @@ main {
 }
 
 .title span {
-    color: white;
+    color: #ffffff;
     text-overflow: ellipsis;
 
 }

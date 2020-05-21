@@ -32,13 +32,21 @@ $.ajax({
 
 });
 
-$("#dropdown").hover(showDropdown);
+$("#dropdown").click(showDropdown);
 
 $(".dropdown").mouseleave(hideDropdown);
 
 $(".dropdown li").click(genre);
 
 $(".logo, #home").click(showAll);
+
+$("#search").click(showSearchbar);
+
+$("input").focusout(hideSearchbar);
+
+$("main").click(hideSearchbar);
+
+$("input").keyup(search);
 
 
 function showDropdown () {
@@ -53,7 +61,7 @@ function hideDropdown () {
 
 };
 
-function genre() {
+function genre () {
 
     $(".element").show();
 
@@ -74,8 +82,51 @@ function genre() {
     );
 };
 
-function showAll() {
+function showAll () {
 
     $(".element").show();
 
 };
+
+function showSearchbar () {
+
+    $(".nav > ul").hide();
+
+    $(".nav > input").show();
+
+    $(".nav > i").show();
+
+}
+
+function hideSearchbar () {
+
+    $(".nav > ul").show();
+
+    $(".nav > input").hide();
+
+    $(".nav > i").hide();
+
+}
+
+function search () {
+
+    var search = $("input").val().toLowerCase().trim();
+
+    $(".element").each(
+
+        function() {
+
+            var title = $(this).find(".title > span").text().toLowerCase();
+
+            if (title.includes(search)) {
+
+                $(this).show();
+
+            } else {
+
+                $(this).hide();
+
+            }
+        }
+    );
+}
